@@ -1,0 +1,13 @@
+.mainPageBlogs {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    column-gap: 60px;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
+    @media screen and (max-width:900px) {
+        display: flex;
+        flex-direction: column;
+
+    }
+}

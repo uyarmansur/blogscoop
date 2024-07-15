@@ -1,0 +1,127 @@
+// main page Trending part
+.trendingCardMain {
+    display: flex;
+    .index {
+        font-size: 2rem;
+        opacity: 0.1;
+        font-weight: 500;
+        letter-spacing: -0.014em;
+        margin-right: 20px;
+    }
+    .cardBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        height: 80px;
+        .cardHeader {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .pp {
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+            }
+            &:hover + .hoverPopUp {
+                display: flex;
+            }
+        }
+
+        .hoverPopUp {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 999;
+            position: absolute;
+            right: -50%;
+            top: -50%;
+            height: 150px;
+            padding: 20px;
+            max-width: 400px;
+            background-color: #fff;
+            box-shadow: 0 0 10px 1px hsla(0, 0%, 60%, 0.2);
+            border-radius: 4px;
+            .hoverCardHeader {
+                display: flex;
+                align-items: center;
+                .pp {
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 8px;
+                }
+            }
+            .hoverBottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .cardTitle {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .cardBottom {
+            opacity: 0.7;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+// main page Blog Part
+
+.cardBlog {
+    display: flex;
+    justify-content: space-between;
+    min-height: 15vh;
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        height: auto;
+    }
+    .cardBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 10px;
+        .cardHeader {
+            display: flex;
+            align-items: center;
+            h6 {
+                font-weight: 800;
+            }
+            .pp {
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+            }
+        }
+        .hoverPopUp {
+            display: none;
+        }
+        .cardTitle {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .cardComment {
+            opacity: 0.6;
+            font-size: large;
+        }
+        .cardBottom {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    }
+    .img {
+        width: 195px;
+        height: auto;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+}

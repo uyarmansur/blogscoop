@@ -1,0 +1,33 @@
+.discoverMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-height: 350px;
+    border-bottom: 1px solid rgba(25, 0, 0, 0.1);
+    position: sticky;
+    top: 90px;
+    @media screen and (max-width:900px) {
+        order: 1;
+        position: static;
+    }
+    .topics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .seeTopics {
+        padding: 10px;
+        a {
+            color: #1a8917;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 400;
+            letter-spacing: 1.5;
+            margin-bottom: 30px;
+        }
+    }
+}
+// .fixed {
+//     position: sticky;
+//     top: 20px;
+// }

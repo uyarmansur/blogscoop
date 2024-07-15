@@ -1,0 +1,28 @@
+.headerMain {
+    background-color: #ffc117;
+    transition: 1s all ease;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    right: 0;
+    z-index: 2;
+    border-bottom: 1px solid black;
+    // @media screen and (max-width:767px) {
+    //     width:400px
+    // }
+    .headerContainer {
+        padding: 18px;
+        width: 1200px;
+        margin: auto;
+        padding: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.bgWhite {
+    background-color: #fff !important;
+    transition: 1s all ease;
+}

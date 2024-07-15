@@ -1,0 +1,18 @@
+.navMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #ffc117;
+    min-height: 55vh;
+    border-bottom: 1px solid black;
+
+    margin: 0 auto;
+    @media screen and (max-width:900px) {
+        margin-top:70px
+    }
+    .navContainer {
+        display: flex;
+        width: 1200px;
+    }
+}

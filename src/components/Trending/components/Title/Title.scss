@@ -1,0 +1,19 @@
+.titleMain {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .iconContainer {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        .icon {
+            border: 1px solid black;
+            border-radius: 100%;
+            padding: 1px;
+            font-size: 1.2rem;
+        }
+    }
+    span {
+        font-weight: 500;
+    }
+}

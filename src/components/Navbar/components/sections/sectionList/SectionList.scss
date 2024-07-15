@@ -1,0 +1,39 @@
+.sectionListMain {
+    gap: 20px;
+
+    .sectionListItems {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        .sectionListItem {
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+        }
+        li {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+                button {
+                    padding: 8px 16px;
+                    border-radius: 25px;
+                    outline: none;
+                    font-size: 14px;
+                    color: white;
+                    background-color: #191919;
+                    border-style: hidden;
+                    font-weight: 400px;
+                    border: 1px solid #191919;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+                :hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
