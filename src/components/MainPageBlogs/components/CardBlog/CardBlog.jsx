@@ -144,7 +144,6 @@ function CardBlog() {
       {people.map((item, index) => (
         <CardCommon
           className="cardBlog"
-          // index={"0" + (index + 1)}
           pp={item.pp}
           name={item.name}
           hoveredName={item.hoveredName}
