@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./SectionList.scss";
 import SectionListItems from "./SectionListItems";
+import SignModal from "../modal/SignModal";
 
 const sections = [
   {
@@ -24,6 +25,11 @@ const sections = [
 ];
 
 export default function SectionList() {
+  const [visible, setVisible] = useState(true);
+
+  const handleModal = () => {
+    setVisible(!visible);
+  };
   return (
     <nav className="sectionListMain">
       <ul className="sectionListItems">
@@ -32,10 +38,11 @@ export default function SectionList() {
         ))}
         <li>
           <Link to="">
-            <button>Get Started</button>
+            <button onClick={handleModal}>Get Started</button>
           </Link>
         </li>
       </ul>
+      <SignModal visible={visible} />
     </nav>
   );
 }
