@@ -2,11 +2,12 @@ import React from "react";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import "./SignUp.scss";
-function SignUp() {
+function SignUp({ handleExit, handlePageOne }) {
+
   return (
     <div className="signUpContainer">
       <div className="signBody">
-        <div style={{textAlign:'center'}}>Join BlogScoop</div>
+        <h2 style={{ textAlign: "center" }}>JOIN BLOGSCOOP</h2>
         <div>
           <div className="signContainer">
             <FaGoogle className="signUpIcon" />
@@ -23,10 +24,28 @@ function SignUp() {
         </div>
         <div>
           <p>
-            Already have an account?    
-            <span style={{ color: "green", fontWeight: "500" }}>    Sign in</span>
+            Already have an account?
+            <span
+              style={{
+                color: "green",
+                fontWeight: "500",
+                cursor: "pointer",
+                paddingLeft: "10px",
+              }}
+              onClick={handlePageOne}
+            >
+              Sign in
+            </span>
           </p>
         </div>
+      </div>
+      <div className="signBottom">
+        <p>
+          By signing up, you agree to our Terms, Data Policy and Cookies Policy.
+        </p>
+      </div>
+      <div className="exitButton" onClick={handleExit}>
+        X
       </div>
     </div>
   );

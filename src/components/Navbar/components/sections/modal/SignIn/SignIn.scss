@@ -1,0 +1,72 @@
+.signInContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 40px;
+    position: relative;
+    .signBody {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        form {
+            .formInput {
+                margin-bottom: 10px;
+                display:block;
+                position: relative;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid black;
+                    width: 100%;
+                    outline: none;
+                }
+                .error {
+                    display: none;
+                    position: absolute;
+                    top:20px;
+                    color: red;
+                    font-size: 0.7rem;
+                }
+            }
+
+        }
+        .signContainer {
+            &:hover {
+                opacity: 0.7;
+                transition: 1s all;
+                cursor: pointer;
+            }
+            display: block;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            border: 1px solid black;
+            border-radius: 26px;
+            padding: 10px 50px;
+            width: 100%;
+            margin-bottom: 5px;
+
+            .signUpIcon {
+                position: absolute;
+                left: 5px;
+                top: 25%;
+            }
+        }
+        .green {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    }
+    .exitButton {
+        position: absolute;
+        cursor: pointer;
+        right: 2px;
+        top: 30px;
+    }
+}

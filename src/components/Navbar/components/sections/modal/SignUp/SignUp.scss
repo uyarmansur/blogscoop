@@ -1,25 +1,44 @@
 .signUpContainer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
+    padding: 40px;
+    position: relative;
     .signBody {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
         height: 75%;
-        width: 75%;
-        margin:0 auto; 
+        width: 100%;
+        margin: 0 auto;
         .signContainer {
-            display: flex;
+            &:hover{
+                color:grey;
+                transition: 1s all;
+                cursor: pointer;
+            }
+            display: block;
+            text-align: center;
             justify-content: center;
             position: relative;
-            border: 2px solid black;
+            border: 1px solid black;
             border-radius: 26px;
-            padding: 5px 25px;
+            padding: 5px 50px;
+            width: 100%;
+            margin-bottom: 5px;
             .signUpIcon {
                 position: absolute;
-                left: 0;
+                left: 5px;
+                top: 25%;
             }
         }
+    }
+    .exitButton{
+        position: absolute;
+        cursor: pointer;
+        right: 2px;
+        top: 30px;
     }
 }

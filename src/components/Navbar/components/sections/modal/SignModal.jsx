@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignModal.scss";
 import SignUp from "./SignUp/SignUp";
-function SignModal({ visible }) {
+import SignIn from "./SignIn/SignIn";
+function SignModal({ visible, handleExit }) {
   console.log(visible);
+
+  const [page, setPage] = useState(1);
+
+  const handlePageOne = () => {
+    setPage(2)
+  };
+
+  const handlePageTwo = () => {
+    setPage(1);
+  };
+
   return (
     <div className={`container ${visible ? "visible" : ""}`}>
       <div className="modalContainer">
-        <SignUp />
+        {page === 1 ? (
+          <SignUp handleExit={handleExit} handlePageOne={handlePageOne} />
+        ) : (
+          <SignIn handleExit={handleExit} handlePageTwo={handlePageTwo} />
+        )}
       </div>
     </div>
   );

@@ -25,10 +25,13 @@ const sections = [
 ];
 
 export default function SectionList() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const handleModal = () => {
     setVisible(!visible);
+  };
+  const handleExit = () => {
+    setVisible(false);
   };
   return (
     <nav className="sectionListMain">
@@ -42,7 +45,7 @@ export default function SectionList() {
           </Link>
         </li>
       </ul>
-      <SignModal visible={visible} />
+      <SignModal visible={visible} handleExit={handleExit}/>
     </nav>
   );
 }
