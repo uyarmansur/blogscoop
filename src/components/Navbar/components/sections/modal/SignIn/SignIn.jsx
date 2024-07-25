@@ -1,29 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignIn.scss";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 
+import { login } from "../../../../../../api/api";
+
 function SignIn({ handlePageTwo, handleExit }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    console.log(email);
+  };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    console.log(password);
+  };
+
+  const handleSubmit = () => {
+    login(email, password)
+      .then((res) => res.json())
+      .then((data) => console.log(data.data.accessToken));
+  };
+
   return (
     <div className="signInContainer">
       <div className="signBody">
         <h2 style={{ textAlign: "center" }}>WELCOME TO BLOGSCOOP</h2>
         <form>
           <div className="formInput">
-            <label htmlFor="name">user mail</label>
-            <input type="text" name="name" />
+            <label htmlFor="email">user mail</label>
+            <input type="email" name="email" onChange={handleEmailChange} />
             <p className="error">Bu alan zorunludur.</p>
           </div>
-         
+
           <div className="formInput">
             <label htmlFor="password">user password</label>
-            <input type="password" name="password" />
+            <input
+              type="password"
+              name="password"
+              onChange={handlePasswordChange}
+            />
             <p className="error">Bu alan zorunludur</p>
           </div>
-          
         </form>
         <div>
-          <div className="signContainer green">Sign In</div>
+          <div className="signContainer green" onClick={handleSubmit}>
+            Sign In
+          </div>
           <div className="signContainer">
             <FaGoogle className="signUpIcon" />
             <p>Sign in with Google</p>
