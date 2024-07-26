@@ -57,7 +57,7 @@ function SignIn({ handlePageTwo, handleExit }) {
           SuccessMessage("Login is successful", "Continue");
           navigate("/user-main");
         } else {
-          ErrorMessage("Login is unsuccessful", "Try Again");
+          ErrorMessage(data.message, "Try Again");
         }
       });
   };
@@ -82,7 +82,7 @@ function SignIn({ handlePageTwo, handleExit }) {
               {errors.password?.message}
             </p>
           </div>
-          <input type="submit" className="signContainer green" />
+          <input value="Sign In" type="submit" className="signContainer green" style={{fontSize:'1rem'}}/>
         </form>
         <div>
           <div className="signContainer">

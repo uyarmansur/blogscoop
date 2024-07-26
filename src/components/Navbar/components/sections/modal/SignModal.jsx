@@ -3,7 +3,6 @@ import "./SignModal.scss";
 import SignUp from "./SignUp/SignUp";
 import SignIn from "./SignIn/SignIn";
 function SignModal({ visible, handleExit }) {
-  console.log(visible);
 
   const [page, setPage] = useState(1);
 
